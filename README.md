@@ -10,6 +10,10 @@ yarn install
 
 ```
 yarn serve
+
+You will need a CORS allow for development to make calls to the nanoDLP.com:8080 build
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
 ```
 
 ### Compiles and minifies for production
