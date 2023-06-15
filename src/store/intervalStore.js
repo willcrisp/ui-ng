@@ -39,6 +39,11 @@ export const intervalStore = reactive({
         });
     }, 2500);
   },
+  /**
+   * The Logs come from NanoDLP as a Mega String
+   * 2023-06-15 10:49:41.586466 {"Layer":"682","module":"Printing","level":"Debug "msg":"Waitingon lift position 0"}
+   * We produce: {time: 2023-06-15 10:49:41.586466,"Layer":"682","module":"Printing","level":"Debug "msg":"Waitingon lift position 0"}
+   */
   convertLogToJson(logs) {
     return logs.split("\n").map((entry) => {
       const jsonStartIdx = entry.indexOf("{");

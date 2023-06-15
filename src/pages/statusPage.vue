@@ -6,23 +6,10 @@
 
       <div class="q-pa-md">
         <h6 class="q-pa-xs">Logs</h6>
-        <q-table
-          flat
-          bordered
-          dense
-          :rows="logs"
-          :columns="columns"
-          row-key="name"
-          :rows-per-page-options="[20]"
-        >
+        <q-table flat bordered dense :rows="logs" :columns="columns" row-key="name" :rows-per-page-options="[20]">
           <template #header="props">
             <q-tr :props="props">
-              <q-th
-                v-for="col in props.cols"
-                :key="col.name"
-                :props="props"
-                auto-width
-              >
+              <q-th v-for="col in props.cols" :key="col.name" :props="props" auto-width>
                 {{ col.label }}
               </q-th>
             </q-tr>
@@ -30,12 +17,7 @@
 
           <template #body="props">
             <q-tr :props="props">
-              <q-td
-                v-for="col in props.cols"
-                :key="col.name"
-                :props="props"
-                auto-width
-              >
+              <q-td v-for="col in props.cols" :key="col.name" :props="props" auto-width>
                 {{ col.value }}
               </q-td>
             </q-tr>

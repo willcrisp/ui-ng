@@ -2,19 +2,9 @@
   <q-page padding>
     <h3>Resin Profiles</h3>
     <div class="q-pa-md">
-      <q-table
-        v-model:expanded="expanded"
-        flat
-        bordered
-        title="Resins"
-        :rows="resinProfiles"
-        :columns="columns"
-        row-key="name"
-      >
+      <q-table v-model:expanded="expanded" flat bordered title="Resins" :rows="resinProfiles" :columns="columns" row-key="name">
         <template #header="props">
           <q-tr :props="props">
-            <q-th auto-width />
-
             <q-th v-for="col in props.cols" :key="col.name" :props="props">
               {{ col.label }}
             </q-th>
@@ -24,11 +14,7 @@
         <template #body="props">
           <q-tr :props="props">
             <q-td auto-width>
-              <q-toggle
-                v-model="props.expand"
-                checked-icon="add"
-                unchecked-icon="remove"
-              />
+              <q-toggle v-model="props.expand" checked-icon="add" unchecked-icon="remove" />
             </q-td>
 
             <q-td v-for="col in props.cols" :key="col.name" :props="props">
@@ -37,9 +23,7 @@
           </q-tr>
           <q-tr v-show="props.expand" :props="props">
             <q-td colspan="100%">
-              <div class="text-left">
-                This is expand slot for row above: {{ props.row.name }}.
-              </div>
+              <div class="text-left">This is expand slot for row above: {{ props.row.name }}.</div>
             </q-td>
           </q-tr>
         </template>

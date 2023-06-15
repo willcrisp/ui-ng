@@ -7,34 +7,15 @@
         <q-toolbar-title> Athena Desktop </q-toolbar-title>
         <q-tabs>
           <q-route-tab icon="sync_alt" to="/status" label="Status" exact />
-          <q-route-tab
-            icon="opacity"
-            to="/resinProfiles"
-            label="Resin Profiles"
-            exact
-          />
+          <q-route-tab icon="opacity" to="/resinProfiles" label="Resin Profiles" exact />
           <q-route-tab icon="3d_rotation" to="/prints" label="Prints" exact />
           <q-route-tab icon="view_in_ar" to="/slicer" label="Slicer" exact />
-          <q-route-tab
-            icon="auto_graph"
-            to="/analytics"
-            label="Analytics"
-            exact
-          />
+          <q-route-tab icon="auto_graph" to="/analytics" label="Analytics" exact />
           <q-route-tab icon="build" to="/settings" label="Settings" exact />
         </q-tabs>
         <q-space />
-        <q-btn
-          :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
-          flat
-          @click="$q.dark.toggle"
-        />
-        <q-toggle
-          v-model="expertMode"
-          label="Expert Mode"
-          color="pink"
-          class="q-pr-md"
-        />
+        <q-btn :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" flat @click="$q.dark.toggle" />
+        <q-toggle v-model="expertMode" label="Expert Mode" color="pink" class="q-pr-md" />
 
         <div>v{{ version }}</div>
       </q-toolbar>
